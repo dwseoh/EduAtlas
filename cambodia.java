@@ -87,7 +87,9 @@ public class cambodia extends JFrame implements ActionListener{
         quiz.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 cambodia.dispose();//move on to quizz
+                new quiz("cambodia");
             }
         });
 

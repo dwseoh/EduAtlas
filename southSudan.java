@@ -89,6 +89,7 @@ public class southSudan extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 southSudan.dispose();//move on to quizz
+                new quiz("southSudan");
             }
         });
 
