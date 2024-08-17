@@ -9,7 +9,7 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class MainMenu extends JFrame{
+public class MainMenu extends JFrame implements ActionListener{
     private JFrame menu;
     private JButton southSudan;
     public MainMenu(){
@@ -27,12 +27,17 @@ public class MainMenu extends JFrame{
         southSudan.setBounds(121,290,110,25);
         southSudan.addActionListener(this);
         southSudan.setFocusable(false);
-        southSudan.setPreferredSize(110,25);
+        southSudan.setPreferredSize(new Dimension(110, 25));
         southSudan.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                System.out.println("Check");
             }
         });
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
     }
 }
