@@ -98,10 +98,6 @@ public class southSudan extends JFrame implements ActionListener {
         southSudan.add(choreTools);
         southSudan.add(oldBedding);
         southSudan.setVisible(true);
-        async();
-    }
-    public void async(){
-
     }
 
     @Override
