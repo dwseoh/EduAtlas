@@ -11,7 +11,7 @@ public class MainMenu extends JFrame{
         menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         menu.setResizable(false);
         menu.setLayout(null);//guis go exactly where I put them
-        menu.setContentPane(new JLabel(new ImageIcon("C:\\Users\\jeffr\\OneDrive\\Documents\\GitHub\\ignitionhacks\\out\\worldmap.jpg")));
+        menu.setContentPane(new JLabel(new ImageIcon("worldmap.jpg")));
         menu.setVisible(true);
     }
 }
