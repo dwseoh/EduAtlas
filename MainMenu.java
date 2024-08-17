@@ -19,7 +19,7 @@ public class MainMenu extends JFrame implements ActionListener{//extends JFrame 
         menu.setLayout(null);//guis go exactly where I put them
         menu.setContentPane(new JLabel(new ImageIcon("worldmap.jpg")));
 
-        if(southSudanComplete){
+        if(southSudanComplete){//if they've passed the quizz a trophy will appear
             setTrophy(700, 530);
         }
         southSudan = new JButton("South Sudan");
