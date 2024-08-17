@@ -21,10 +21,10 @@ public class MainMenu extends JFrame implements ActionListener{
         menu.setResizable(false);
         menu.setLayout(null);//guis go exactly where I put them
         menu.setContentPane(new JLabel(new ImageIcon("worldmap.jpg")));
-        menu.setVisible(true);
+
 
         southSudan = new JButton("South Sudan");
-        southSudan.setBounds(121,290,110,25);
+        southSudan.setBounds(300,200,110,25);
         southSudan.addActionListener(this);
         southSudan.setFocusable(false);
         southSudan.setPreferredSize(new Dimension(110, 25));
@@ -34,6 +34,8 @@ public class MainMenu extends JFrame implements ActionListener{
                 System.out.println("Check");
             }
         });
+        menu.add(southSudan);
+        menu.setVisible(true);
     }
 
     @Override
