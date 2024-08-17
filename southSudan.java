@@ -9,17 +9,17 @@ public class southSudan extends JFrame implements ActionListener {
     private JButton choreTools;
     private JButton religion;
     private JButton oldBedding;
-    private JButton quizz;
+    private JButton quiz;
     private boolean traditional = false;//track if they've opened the object
     private boolean chore = false;//after all 4 are opened option to move on appears
     private boolean old = false;
     private boolean relig = false;
     public southSudan(){
-        new Thread(() -> {//constantly checking if they can move on to quizz
+        new Thread(() -> {//constantly checking if they can move on to quiz
             while(!(traditional && chore && old && relig)) {
                 System.out.println("working");//for some reason it only works when there is a print statement
             }
-            southSudan.add(quizz);
+            southSudan.add(quiz);
             southSudan.repaint();
         }).start();
 
@@ -80,12 +80,12 @@ public class southSudan extends JFrame implements ActionListener {
             }
         });
 
-        quizz = new JButton("Quizz");
-        quizz.setBounds(300, 290, 110, 25);
-        quizz.addActionListener(this);
-        quizz.setFocusable(false);
-        quizz.setPreferredSize(new Dimension(110, 25));
-        quizz.addActionListener(new ActionListener() {
+        quiz = new JButton("Quiz");
+        quiz.setBounds(300, 290, 110, 25);
+        quiz.addActionListener(this);
+        quiz.setFocusable(false);
+        quiz.setPreferredSize(new Dimension(110, 25));
+        quiz.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 southSudan.dispose();//move on to quizz
