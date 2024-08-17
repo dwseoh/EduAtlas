@@ -9,18 +9,13 @@ public class cambodia extends JFrame implements ActionListener{
     private JButton pesticide;
     private JButton fishing;
     private JButton quiz;
-    private boolean pesticide_ = false;//track if they've opened the object
-    private boolean brick_ = false;//after all 4 are opened option to move on appears
-    private boolean banana_ = false;
-    private boolean fishing_ = false;
+    private JButton toMap;
+    public static boolean pesticide_ = false;//track if they've opened the object
+    public static boolean brick_ = false;//after all 4 are opened option to move on appears
+    public static boolean banana_ = false;
+    public static boolean fishing_ = false;
     public cambodia(){
-        new Thread(() -> {//constantly checking if they can move on to quiz
-            while(!(pesticide_ && brick_ && banana_ && fishing_)) {
-                System.out.println("working");//for some reason it only works when there is a print statement
-            }
-            cambodia.add(quiz);
-            cambodia.repaint();
-        }).start();
+
 
         cambodia = new JFrame();//initializes JFrame
         cambodia.setBackground(Color.black);
@@ -92,6 +87,30 @@ public class cambodia extends JFrame implements ActionListener{
                 new quiz("cambodia");
             }
         });
+
+        new Thread(() -> {//constantly checking if they can move on to quiz
+            if(!MainMenu.cambodiaCopmlete) {
+                while (!(pesticide_ && brick_ && banana_ && fishing_)) {
+                    System.out.println("working");//for some reason it only works when there is a print statement
+                }
+            }
+            cambodia.add(quiz);
+            cambodia.repaint();
+        }).start();
+
+        toMap = new JButton("return to map");//allows them to return to map without badge
+        toMap.setBounds(203,250,130,25);
+        toMap.addActionListener(this);
+        toMap.setFocusable(false);
+        toMap.setPreferredSize((new Dimension(130, 25)));
+        toMap.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cambodia.dispose();
+                new MainMenu();
+            }
+        });
+        cambodia.add(toMap);
 
         cambodia.add(banana);
         cambodia.add(brick);

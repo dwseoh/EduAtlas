@@ -10,18 +10,13 @@ public class southSudan extends JFrame implements ActionListener {
     private JButton religion;
     private JButton oldBedding;
     private JButton quiz;
-    private boolean traditional = false;//track if they've opened the object
-    private boolean chore = false;//after all 4 are opened option to move on appears
-    private boolean old = false;
-    private boolean relig = false;
+    private JButton toMap;
+    public static boolean traditional = false;//track if they've opened the object
+    public static boolean chore = false;//after all 4 are opened option to move on appears
+    public static boolean old = false;
+    public static boolean relig = false;
     public southSudan(){
-        new Thread(() -> {//constantly checking if they can move on to quiz
-            while(!(traditional && chore && old && relig)) {
-                System.out.println("working");//for some reason it only works when there is a print statement
-            }
-            southSudan.add(quiz);
-            southSudan.repaint();
-        }).start();
+
 
         southSudan = new JFrame();//initializes JFrame
         southSudan.setBackground(Color.black);
@@ -93,12 +88,36 @@ public class southSudan extends JFrame implements ActionListener {
             }
         });
 
+        toMap = new JButton("return to map");//allows them to return to map without badge
+        toMap.setBounds(203,250,130,25);
+        toMap.addActionListener(this);
+        toMap.setFocusable(false);
+        toMap.setPreferredSize((new Dimension(130, 25)));
+        toMap.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                southSudan.dispose();
+                new MainMenu();
+            }
+        });
+        southSudan.add(toMap);
+
 
         southSudan.add(traditionalBridalAttire);
         southSudan.add(religion);
         southSudan.add(choreTools);
         southSudan.add(oldBedding);
         southSudan.setVisible(true);
+
+        new Thread(() -> {//constantly checking if they can move on to quiz
+            if(!MainMenu.southSudanComplete) {
+                while (!(traditional && chore && old && relig)) {
+                    System.out.println("working");//for some reason it only works when there is a print statement
+                }
+            }
+            southSudan.add(quiz);
+            southSudan.repaint();
+        }).start();
     }
 
     @Override
