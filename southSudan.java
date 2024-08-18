@@ -32,9 +32,14 @@ public class southSudan extends JFrame implements ActionListener {
         traditionalBridalAttire.setOpaque(false);
         traditionalBridalAttire.setContentAreaFilled(false);
         traditionalBridalAttire.setBorderPainted(false);
-        traditionalBridalAttire.setBounds(717,87, 450, 253);
+        traditionalBridalAttire.setBounds(717,200, 450, 253);
         traditionalBridalAttire.addActionListener(this);
         traditionalBridalAttire.setFocusable(false);
+        if(traditional){//check to see if it was clicked before, if it was its green same for all
+            Icon weddingDressD = new ImageIcon("weddingDressDone.png");//green outline
+            traditionalBridalAttire.setIcon(weddingDressD);//change the outline
+            southSudan.repaint();
+        }
         traditionalBridalAttire.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -50,9 +55,14 @@ public class southSudan extends JFrame implements ActionListener {
         choreTools.setOpaque(false);
         choreTools.setContentAreaFilled(false);
         choreTools.setBorderPainted(false);
-        choreTools.setBounds(850,505, 300, 169);
+        choreTools.setBounds(850,600, 300, 169);
         choreTools.addActionListener(this);
         choreTools.setFocusable(false);
+        if(chore){//check if it was clicked
+            Icon choreToolD = new ImageIcon("choreToolsDone.png");
+            choreTools.setIcon(choreToolD);
+            southSudan.repaint();
+        }
         choreTools.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -64,13 +74,19 @@ public class southSudan extends JFrame implements ActionListener {
         });
 
         Icon religionIcon = new ImageIcon("religion.png");
+
         religion = new JButton(religionIcon);
         religion.setOpaque(false);
         religion.setContentAreaFilled(false);
         religion.setBorderPainted(false);
-        religion.setBounds(175,70, 450, 253);
+        religion.setBounds(175,110, 450, 253);
         religion.addActionListener(this);
         religion.setFocusable(false);
+        if(relig){//check if it was clicked
+            Icon religD = new ImageIcon("religionDone.png");
+            religion.setIcon(religD);
+            southSudan.repaint();
+        }
         religion.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -89,6 +105,11 @@ public class southSudan extends JFrame implements ActionListener {
         oldBedding.setBounds(185,423, 500, 282);
         oldBedding.addActionListener(this);
         oldBedding.setFocusable(false);
+        if(old){//check if it was clicked
+            Icon quilD = new ImageIcon("quiltDone.png");
+            oldBedding.setIcon(quilD);
+            southSudan.repaint();
+        }
         oldBedding.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
