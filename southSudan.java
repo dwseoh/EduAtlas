@@ -11,10 +11,10 @@ public class southSudan extends JFrame implements ActionListener {
     private JButton oldBedding;
     private JButton quiz;
     private JButton toMap;
-    public static boolean traditional = true;//track if they've opened the object
-    public static boolean chore = true;//after all 4 are opened option to move on appears
-    public static boolean old = true;
-    public static boolean relig = true;
+    public static boolean traditional = false;//track if they've opened the object
+    public static boolean chore = false;//after all 4 are opened option to move on appears
+    public static boolean old = false;
+    public static boolean relig = false;
     public southSudan(){
 
 

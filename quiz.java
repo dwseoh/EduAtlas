@@ -18,7 +18,7 @@ public class quiz extends JFrame implements ActionListener {
     private JLabel badge;
     private JLabel score;
     private int questionNum = 0;
-    private int correctAnswerCount = 0;
+    public static int correctAnswerCount = 0;
 
 
     public quiz(String country_){
@@ -146,8 +146,8 @@ public class quiz extends JFrame implements ActionListener {
         done.setVisible(true);
         quiz.add(done);
 
-        score = new JLabel(String.valueOf(correctAnswerCount));
-        score.setBounds(200, 500, 50, 50);
+        score = new JLabel(new ImageIcon(scoreReturn(correctAnswerCount)));
+        score.setBounds(400, 320, 35, 62);
         score.setVisible(false);
         quiz.add(score);
 
@@ -298,7 +298,9 @@ public class quiz extends JFrame implements ActionListener {
                 b.setVisible(false);
                 c.setVisible(false);
                 d.setVisible(false);
+                System.out.println(correctAnswerCount);
                 badge.setVisible(true);
+                score.setIcon(new ImageIcon(scoreReturn(correctAnswerCount)));
                 score.setVisible(true);
 
                 return "question6.png";
@@ -308,5 +310,17 @@ public class quiz extends JFrame implements ActionListener {
                 return "error";
             }
         }
+    }
+    public String scoreReturn(int i){
+        System.out.println(i);
+        return switch (i) {
+            case 0 -> "0.png";
+            case 1 -> "1.png";
+            case 2 -> "2.png";
+            case 3 -> "3.png";
+            case 4 -> "4.png";
+            case 5 -> "5.png";
+            default -> "f";
+        };
     }
 }
