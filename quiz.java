@@ -18,7 +18,7 @@ public class quiz extends JFrame implements ActionListener {
     private JLabel badge;
     private JLabel score;
     private int questionNum = 0;
-    public static int correctAnswerCount = 0;
+    public int correctAnswerCount = 0;
 
 
     public quiz(String country_){
