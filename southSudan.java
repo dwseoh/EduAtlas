@@ -170,7 +170,7 @@ public class southSudan extends JFrame implements ActionListener {
         new Thread(() -> {//constantly checking if they can move on to quiz
             if(!MainMenu.southSudanComplete) {
                 while (!(traditional && chore && old && relig)) {
-                    System.out.println("working");//for some reason it only works when there is a print statement
+                    //System.out.println("working");//for some reason it only works when there is a print statement
                 }
             }
             southSudan.add(quiz);
