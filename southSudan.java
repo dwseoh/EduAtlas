@@ -11,6 +11,7 @@ public class southSudan extends JFrame implements ActionListener {
     private JButton oldBedding;
     private JButton quiz;
     private JButton toMap;
+    private JLabel quilt;
     public static boolean traditional = false;//track if they've opened the object
     public static boolean chore = false;//after all 4 are opened option to move on appears
     public static boolean old = false;
@@ -46,7 +47,8 @@ public class southSudan extends JFrame implements ActionListener {
                 traditional = true;
                 Icon weddingDressD = new ImageIcon("weddingDressDone.png");
                 traditionalBridalAttire.setIcon(weddingDressD);
-                southSudan.repaint();
+                southSudan.dispose();
+                new quiltPop("wedding");
             }
         });
 
@@ -69,7 +71,8 @@ public class southSudan extends JFrame implements ActionListener {
                 chore = true;
                 Icon choreToolD = new ImageIcon("choreToolsDone.png");
                 choreTools.setIcon(choreToolD);
-                southSudan.repaint();
+                southSudan.dispose();
+                new quiltPop("chore");
             }
         });
 
@@ -93,7 +96,8 @@ public class southSudan extends JFrame implements ActionListener {
                 relig = true;
                 Icon religD = new ImageIcon("religionDone.png");
                 religion.setIcon(religD);
-                southSudan.repaint();
+                southSudan.dispose();
+                new quiltPop("relig");
             }
         });
 
@@ -109,6 +113,8 @@ public class southSudan extends JFrame implements ActionListener {
             Icon quilD = new ImageIcon("quiltDone.png");
             oldBedding.setIcon(quilD);
             southSudan.repaint();
+
+
         }
         oldBedding.addActionListener(new ActionListener() {
             @Override
@@ -116,7 +122,8 @@ public class southSudan extends JFrame implements ActionListener {
                 old = true;
                 Icon quilD = new ImageIcon("quiltDone.png");
                 oldBedding.setIcon(quilD);
-                southSudan.repaint();
+                southSudan.dispose();
+                new quiltPop("quilt");
             }
         });
 
