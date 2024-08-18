@@ -6,9 +6,13 @@ public class MainMenu extends JFrame implements ActionListener{//extends JFrame 
     private JFrame menu;//the background
     private JButton southSudan;//when student clicks South Sudan button bring them to South Sudan
     private JButton cambodia;
+    private JButton haiti;
+    private JButton mali;
     private JLabel trophy;
     public static boolean southSudanComplete = false;//if completed will make true, displaying trophy instead of clicking in
     public static boolean cambodiaCopmlete = false;
+    public static boolean haitiComplete = false;
+    public static boolean maliComplete = false;
     public MainMenu(){
         menu = new JFrame();//initializes JFrame
         menu.setBackground(Color.black);
@@ -17,10 +21,10 @@ public class MainMenu extends JFrame implements ActionListener{//extends JFrame 
         menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         menu.setResizable(false);
         menu.setLayout(null);//guis go exactly where I put them
-        menu.setContentPane(new JLabel(new ImageIcon("worldmap.png")));
+        menu.setContentPane(new JLabel(new ImageIcon("worldmap.jpg")));
 
         if(southSudanComplete){//if they've passed the quizz a trophy will appear
-            setTrophy(700, 530);
+            setTrophy(700, 375);
         }
         Icon southIcon = new ImageIcon("southSudanButton.png");
         southSudan = new JButton(southIcon);
@@ -40,7 +44,7 @@ public class MainMenu extends JFrame implements ActionListener{//extends JFrame 
         menu.add(southSudan);
 
         if(cambodiaCopmlete){
-            setTrophy(1000, 480);
+            setTrophy(1082, 382);
         }
         Icon camIcon = new ImageIcon("cambodiaButton.png");
         cambodia = new JButton(camIcon);
@@ -58,6 +62,47 @@ public class MainMenu extends JFrame implements ActionListener{//extends JFrame 
             }
         });
         menu.add(cambodia);
+
+        if(maliComplete){//if they've passed the quizz a trophy will appear
+            setTrophy(288, 350);
+        }
+        Icon haitIcon = new ImageIcon("haitiButton.png");
+        haiti = new JButton(haitIcon);
+        haiti.setOpaque(false);
+        haiti.setContentAreaFilled(false);
+        haiti.setBorderPainted(false);
+        haiti.setBounds(288, 319, 19, 19);
+        haiti.addActionListener(this);
+        haiti.setFocusable(false);
+        haiti.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                menu.dispose();//deletes this frame opens a new one
+                //new southSudan();
+            }
+        });
+        menu.add(haiti);
+
+        if(maliComplete){//if they've passed the quizz a trophy will appear
+            setTrophy(550, 300);
+        }
+        Icon malIcon = new ImageIcon("maliButton.png");
+        mali = new JButton(malIcon);
+        mali.setOpaque(false);
+        mali.setContentAreaFilled(false);
+        mali.setBorderPainted(false);
+        mali.setBounds(550, 250, 120, 120);
+        mali.addActionListener(this);
+        mali.setFocusable(false);
+        mali.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                menu.dispose();//deletes this frame opens a new one
+                //new southSudan();
+            }
+        });
+        menu.add(mali);
+
 
         menu.setVisible(true);
     }
