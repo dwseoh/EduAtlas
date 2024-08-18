@@ -11,11 +11,10 @@ public class southSudan extends JFrame implements ActionListener {
     private JButton oldBedding;
     private JButton quiz;
     private JButton toMap;
-    private JLabel quilt;
-    public static boolean traditional = false;//track if they've opened the object
-    public static boolean chore = false;//after all 4 are opened option to move on appears
-    public static boolean old = false;
-    public static boolean relig = false;
+    public static boolean traditional = true;//track if they've opened the object
+    public static boolean chore = true;//after all 4 are opened option to move on appears
+    public static boolean old = true;
+    public static boolean relig = true;
     public southSudan(){
 
 
@@ -127,10 +126,15 @@ public class southSudan extends JFrame implements ActionListener {
             }
         });
 
-        quiz = new JButton("Quiz");
-        quiz.setBounds(1315, 745, 110, 25);
+        Icon set = new ImageIcon("continueQuiz.png");
+        quiz = new JButton(set);
+        quiz.setOpaque(false);
+        quiz.setContentAreaFilled(false);
+        quiz.setBorderPainted(false);
+        quiz.setBounds(990, 700, 581, 77);
         quiz.addActionListener(this);
         quiz.setFocusable(false);
+        quiz.setVisible(true);
         quiz.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
