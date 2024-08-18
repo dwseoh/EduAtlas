@@ -124,7 +124,7 @@ public class quiz extends JFrame implements ActionListener {
         });
         quiz.add(d);
 
-        Icon fini = new ImageIcon("doneButton.png");
+        Icon fini = new ImageIcon("Assets/doneButton.png");
         done = new JButton(fini);
         done.setOpaque(false);
         done.setContentAreaFilled(false);
@@ -151,7 +151,7 @@ public class quiz extends JFrame implements ActionListener {
         score.setVisible(false);
         quiz.add(score);
 
-        badge = new JLabel(new ImageIcon("badge.png"));
+        badge = new JLabel(new ImageIcon("Assets/badge.png"));
         badge.setForeground(Color.blue);
         badge.setBounds(45,150, 1440, 810);
         badge.setVisible(false);
@@ -215,82 +215,82 @@ public class quiz extends JFrame implements ActionListener {
         answer.setVisible(false);
         switch (questionNum_) {
             case 0 -> {
-                Icon qa = new ImageIcon("q1a.png");
+                Icon qa = new ImageIcon("Assets/q1a.png");
                 a.setIcon(qa);
-                Icon qb = new ImageIcon("q1b.png");
+                Icon qb = new ImageIcon("Assets/q1b.png");
                 b.setIcon(qb);
-                Icon qc = new ImageIcon("q1c.png");
+                Icon qc = new ImageIcon("Assets/q1c.png");
                 c.setIcon(qc);
-                Icon qd = new ImageIcon("q1d.png");
+                Icon qd = new ImageIcon("Assets/q1d.png");
                 d.setIcon(qd);
-                Icon answe = new ImageIcon("answerA.png");
+                Icon answe = new ImageIcon("Assets/answerA.png");
                 answer.setIcon(answe);
                 questionNum++;
                 answer.setBounds(170, 350, 805, 76);
-                return "question1.png";
+                return "Assets/question1.png";
             }
             case 1 -> {
-                Icon qa = new ImageIcon("q2a.png");
+                Icon qa = new ImageIcon("Assets/q2a.png");
                 a.setIcon(qa);
-                Icon qb = new ImageIcon("q2b.png");
+                Icon qb = new ImageIcon("Assets/q2b.png");
                 b.setIcon(qb);
-                Icon qc = new ImageIcon("q2c.png");
+                Icon qc = new ImageIcon("Assets/q2c.png");
                 c.setIcon(qc);
-                Icon qd = new ImageIcon("q2d.png");
+                Icon qd = new ImageIcon("Assets/q2d.png");
                 d.setIcon(qd);
-                Icon answe = new ImageIcon("answerD.png");
+                Icon answe = new ImageIcon("Assets/answerD.png");
                 answer.setIcon(answe);
                 questionNum++;
                 answer.setBounds(170, 620, 805, 76);
-                return "question2.png";
+                return "Assets/question2.png";
             }
             //file 2
             case 2 -> {
-                Icon qa = new ImageIcon("q3a.png");
+                Icon qa = new ImageIcon("Assets/q3a.png");
                 a.setIcon(qa);
-                Icon qb = new ImageIcon("q3b.png");
+                Icon qb = new ImageIcon("Assets/q3b.png");
                 b.setIcon(qb);
-                Icon qc = new ImageIcon("q3c.png");
+                Icon qc = new ImageIcon("Assets/q3c.png");
                 c.setIcon(qc);
-                Icon qd = new ImageIcon("q3d.png");
+                Icon qd = new ImageIcon("Assets/q3d.png");
                 d.setIcon(qd);
-                Icon answe = new ImageIcon("answerC.png");
+                Icon answe = new ImageIcon("Assets/answerC.png");
                 answer.setIcon(answe);
                 questionNum++;
                 answer.setBounds(170, 530, 805, 76);
-                return "question3.png";
+                return "Assets/question3.png";
             }
             //file 3
             case 3 -> {
-                Icon qa = new ImageIcon("q4a.png");
+                Icon qa = new ImageIcon("Assets/q4a.png");
                 a.setIcon(qa);
-                Icon qb = new ImageIcon("q4b.png");
+                Icon qb = new ImageIcon("Assets/q4b.png");
                 b.setIcon(qb);
-                Icon qc = new ImageIcon("q4c.png");
+                Icon qc = new ImageIcon("Assets/q4c.png");
                 c.setIcon(qc);
-                Icon qd = new ImageIcon("q4d.png");
+                Icon qd = new ImageIcon("Assets/q4d.png");
                 d.setIcon(qd);
-                Icon answe = new ImageIcon("answerC.png");
+                Icon answe = new ImageIcon("Assets/answerC.png");
                 answer.setIcon(answe);
                 questionNum++;
                 answer.setBounds(170, 530, 805, 76);
-                return "question4.png";
+                return "Assets/question4.png";
             }
             //file 4
             case 4 -> {
-                Icon qa = new ImageIcon("q5a.png");
+                Icon qa = new ImageIcon("Assets/q5a.png");
                 a.setIcon(qa);
-                Icon qb = new ImageIcon("q5b.png");
+                Icon qb = new ImageIcon("Assets/q5b.png");
                 b.setIcon(qb);
-                Icon qc = new ImageIcon("q5c.png");
+                Icon qc = new ImageIcon("Assets/q5c.png");
                 c.setIcon(qc);
-                Icon qd = new ImageIcon("q5d.png");
+                Icon qd = new ImageIcon("Assets/q5d.png");
                 d.setIcon(qd);
-                Icon answe = new ImageIcon("answerA.png");
+                Icon answe = new ImageIcon("Assets/answerA.png");
                 answer.setIcon(answe);
                 questionNum++;
                 answer.setBounds(170, 350, 805, 76);
-                return "question5.png";
+                return "Assets/question5.png";
             }
             case 5 ->{
                 a.setVisible(false);
@@ -301,7 +301,7 @@ public class quiz extends JFrame implements ActionListener {
                 score.setIcon(new ImageIcon(scoreReturn(correctAnswerCount)));
                 score.setVisible(true);
 
-                return "question6.png";
+                return "Assets/question6.png";
             }
             //file 5
             default -> {
@@ -311,12 +311,12 @@ public class quiz extends JFrame implements ActionListener {
     }
     public String scoreReturn(int i){
         return switch (i) {
-            case 0 -> "0.png";
-            case 1 -> "1.png";
-            case 2 -> "2.png";
-            case 3 -> "3.png";
-            case 4 -> "4.png";
-            case 5 -> "5.png";
+            case 0 -> "Assets/0.png";
+            case 1 -> "Assets/1.png";
+            case 2 -> "Assets/2.png";
+            case 3 -> "Assets/3.png";
+            case 4 -> "Assets/4.png";
+            case 5 -> "Assets/5.png";
             default -> "f";
         };
     }

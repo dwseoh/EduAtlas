@@ -1,3 +1,3 @@
-# ignitionhacks
-TROLLLLINGGGGGGGGGGGGGGGGGGGGGG FOR FUN "Testing"
-code for quiz, currently if they return to map frmo the quiz they get a badge for not doing anything
+# EduAtlas
+It is an educational software that teaches geography and also serves as a platform to raise awareness about barriers to accessible education
+

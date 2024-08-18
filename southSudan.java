@@ -25,9 +25,9 @@ public class southSudan extends JFrame implements ActionListener {
         southSudan.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         southSudan.setResizable(false);
         southSudan.setLayout(null);//guis go exactly where I put them
-        southSudan.setContentPane(new JLabel(new ImageIcon("southSudan.png")));
+        southSudan.setContentPane(new JLabel(new ImageIcon("Assets/southSudan.png")));
 
-        Icon bridalIcon = new ImageIcon("weddingDress.png");
+        Icon bridalIcon = new ImageIcon("Assets/weddingDress.png");
         traditionalBridalAttire = new JButton(bridalIcon);
         traditionalBridalAttire.setOpaque(false);
         traditionalBridalAttire.setContentAreaFilled(false);
@@ -36,7 +36,7 @@ public class southSudan extends JFrame implements ActionListener {
         traditionalBridalAttire.addActionListener(this);
         traditionalBridalAttire.setFocusable(false);
         if(traditional){//check to see if it was clicked before, if it was its green same for all
-            Icon weddingDressD = new ImageIcon("weddingDressDone.png");//green outline
+            Icon weddingDressD = new ImageIcon("Assets/weddingDressDone.png");//green outline
             traditionalBridalAttire.setIcon(weddingDressD);//change the outline
             southSudan.repaint();
         }
@@ -44,14 +44,14 @@ public class southSudan extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 traditional = true;
-                Icon weddingDressD = new ImageIcon("weddingDressDone.png");
+                Icon weddingDressD = new ImageIcon("Assets/weddingDressDone.png");
                 traditionalBridalAttire.setIcon(weddingDressD);
                 southSudan.dispose();
                 new quiltPop("wedding");
             }
         });
 
-        Icon choreIcon = new ImageIcon("choreTools.png");
+        Icon choreIcon = new ImageIcon("Assets/choreTools.png");
         choreTools = new JButton(choreIcon);
         choreTools.setOpaque(false);
         choreTools.setContentAreaFilled(false);
@@ -60,7 +60,7 @@ public class southSudan extends JFrame implements ActionListener {
         choreTools.addActionListener(this);
         choreTools.setFocusable(false);
         if(chore){//check if it was clicked
-            Icon choreToolD = new ImageIcon("choreToolsDone.png");
+            Icon choreToolD = new ImageIcon("Assets/choreToolsDone.png");
             choreTools.setIcon(choreToolD);
             southSudan.repaint();
         }
@@ -68,14 +68,14 @@ public class southSudan extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 chore = true;
-                Icon choreToolD = new ImageIcon("choreToolsDone.png");
+                Icon choreToolD = new ImageIcon("Assets/choreToolsDone.png");
                 choreTools.setIcon(choreToolD);
                 southSudan.dispose();
                 new quiltPop("chore");
             }
         });
 
-        Icon religionIcon = new ImageIcon("religion.png");
+        Icon religionIcon = new ImageIcon("Assets/religion.png");
 
         religion = new JButton(religionIcon);
         religion.setOpaque(false);
@@ -85,7 +85,7 @@ public class southSudan extends JFrame implements ActionListener {
         religion.addActionListener(this);
         religion.setFocusable(false);
         if(relig){//check if it was clicked
-            Icon religD = new ImageIcon("religionDone.png");
+            Icon religD = new ImageIcon("Assets/religionDone.png");
             religion.setIcon(religD);
             southSudan.repaint();
         }
@@ -93,14 +93,14 @@ public class southSudan extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 relig = true;
-                Icon religD = new ImageIcon("religionDone.png");
+                Icon religD = new ImageIcon("Assets/religionDone.png");
                 religion.setIcon(religD);
                 southSudan.dispose();
                 new quiltPop("relig");
             }
         });
 
-        Icon bedIcon = new ImageIcon("quilt.png");
+        Icon bedIcon = new ImageIcon("Assets/quilt.png");
         oldBedding = new JButton(bedIcon);
         oldBedding.setOpaque(false);
         oldBedding.setContentAreaFilled(false);
@@ -109,7 +109,7 @@ public class southSudan extends JFrame implements ActionListener {
         oldBedding.addActionListener(this);
         oldBedding.setFocusable(false);
         if(old){//check if it was clicked
-            Icon quilD = new ImageIcon("quiltDone.png");
+            Icon quilD = new ImageIcon("Assets/quiltDone.png");
             oldBedding.setIcon(quilD);
             southSudan.repaint();
 
@@ -119,14 +119,14 @@ public class southSudan extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 old = true;
-                Icon quilD = new ImageIcon("quiltDone.png");
+                Icon quilD = new ImageIcon("Assets/quiltDone.png");
                 oldBedding.setIcon(quilD);
                 southSudan.dispose();
                 new quiltPop("quilt");
             }
         });
 
-        Icon set = new ImageIcon("continueQuiz.png");
+        Icon set = new ImageIcon("Assets/continueQuiz.png");
         quiz = new JButton(set);
         quiz.setOpaque(false);
         quiz.setContentAreaFilled(false);
@@ -143,7 +143,7 @@ public class southSudan extends JFrame implements ActionListener {
             }
         });
 
-        Icon returner = new ImageIcon("return.png");
+        Icon returner = new ImageIcon("Assets/return.png");
         toMap = new JButton(returner);//allows them to return to map without badge
         toMap.setBounds(5,715,300,44);
         toMap.addActionListener(this);

@@ -21,12 +21,12 @@ public class MainMenu extends JFrame implements ActionListener{//extends JFrame 
         menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         menu.setResizable(false);
         menu.setLayout(null);//guis go exactly where I put them
-        menu.setContentPane(new JLabel(new ImageIcon("worldmap.jpg")));
+        menu.setContentPane(new JLabel(new ImageIcon("Assets/worldMap.jpg")));
 
         if(southSudanComplete){//if they've passed the quizz a trophy will appear
             setTrophy(700, 375);
         }
-        Icon southIcon = new ImageIcon("southSudanButton.png");
+        Icon southIcon = new ImageIcon("Assets/southSudanButton.png");
         southSudan = new JButton(southIcon);
         southSudan.setOpaque(false);
         southSudan.setContentAreaFilled(false);
@@ -46,7 +46,7 @@ public class MainMenu extends JFrame implements ActionListener{//extends JFrame 
         if(cambodiaCopmlete){
             setTrophy(1052, 335);
         }
-        Icon camIcon = new ImageIcon("cambodiaButton.png");
+        Icon camIcon = new ImageIcon("Assets/cambodiaButton.png");
         cambodia = new JButton(camIcon);
         cambodia.setOpaque(false);
         cambodia.setContentAreaFilled(false);
@@ -66,7 +66,7 @@ public class MainMenu extends JFrame implements ActionListener{//extends JFrame 
         if(maliComplete){//if they've passed the quizz a trophy will appear
             setTrophy(288, 350);
         }
-        Icon haitIcon = new ImageIcon("haitiButton.png");
+        Icon haitIcon = new ImageIcon("Assets/haitiButton.png");
         haiti = new JButton(haitIcon);
         haiti.setOpaque(false);
         haiti.setContentAreaFilled(false);
@@ -86,7 +86,7 @@ public class MainMenu extends JFrame implements ActionListener{//extends JFrame 
         if(maliComplete){//if they've passed the quizz a trophy will appear
             setTrophy(550, 300);
         }
-        Icon malIcon = new ImageIcon("maliButton.png");
+        Icon malIcon = new ImageIcon("Assets/maliButton.png");
         mali = new JButton(malIcon);
         mali.setOpaque(false);
         mali.setContentAreaFilled(false);
@@ -112,7 +112,7 @@ public class MainMenu extends JFrame implements ActionListener{//extends JFrame 
 
     }
     public void setTrophy(int xValue, int yValue){//places a badge instead of the button to go into the country
-        trophy = new JLabel((new ImageIcon("trophy.png")));
+        trophy = new JLabel((new ImageIcon("Assets/trophy.png")));
         trophy.setBounds(xValue, yValue, 120, 120);
         trophy.setVisible(true);
         menu.add(trophy);

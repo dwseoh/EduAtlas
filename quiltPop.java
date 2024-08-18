@@ -18,7 +18,7 @@ public class quiltPop extends JFrame implements ActionListener {
         quiltPopUp.setLayout(null);//guis go exactly where I put them
         quiltPopUp.setContentPane(new JLabel(new ImageIcon(fileReturn(item))));
 
-        Icon done = new ImageIcon("doneButton.png");
+        Icon done = new ImageIcon("Assets/doneButton.png");
         exit = new JButton(done);
         exit.setBounds(566, 650,308, 76);
         exit.addActionListener(this);
@@ -38,10 +38,10 @@ public class quiltPop extends JFrame implements ActionListener {
     }
     public String fileReturn(String items){
         return switch (items) {
-            case "quilt" -> "quiltPop.png";
-            case "wedding" -> "weddingPop.png";
-            case "relig" -> "religionPop.png";
-            case "chore" -> "chorePop.png";
+            case "quilt" -> "Assets/quiltPop.png";
+            case "wedding" -> "Assets/weddingPop.png";
+            case "relig" -> "Assets/religionPop.png";
+            case "chore" -> "Assets/chorePop.png";
             default -> "No";
         };
     }

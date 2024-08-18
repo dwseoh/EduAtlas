@@ -11,9 +11,9 @@ public class Front extends JFrame implements ActionListener {
         cover.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         cover.setResizable(false);
         cover.setLayout(null);
-        cover.setContentPane(new JLabel(new ImageIcon("front.png")));
+        cover.setContentPane(new JLabel(new ImageIcon("Assets/front.png")));
 
-        Icon starter = new ImageIcon("start.png");
+        Icon starter = new ImageIcon("Assets/start.png");
         start = new JButton(starter);
         start.setBounds(1000, 550,300, 300);
         start.addActionListener(this);

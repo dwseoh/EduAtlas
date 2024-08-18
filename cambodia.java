@@ -24,7 +24,7 @@ public class cambodia extends JFrame implements ActionListener{
         cambodia.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         cambodia.setResizable(false);
         cambodia.setLayout(null);//guis go exactly where I put them
-        cambodia.setContentPane(new JLabel(new ImageIcon("cambodia.jpg")));
+        cambodia.setContentPane(new JLabel(new ImageIcon("Assets/cambodia.jpg")));
 
         brick = new JButton();
         brick.setBounds(121,290, 110, 25);
