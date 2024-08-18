@@ -199,7 +199,6 @@ public class quiz extends JFrame implements ActionListener {
         }
     }
     public void southSudanQuiz(){//need code only make true if they pass quiz
-        System.out.println("test");
         quizLabel.setIcon(new ImageIcon(fileReturnSudan(questionNum)));
         quiz.repaint();
     }
@@ -298,7 +297,6 @@ public class quiz extends JFrame implements ActionListener {
                 b.setVisible(false);
                 c.setVisible(false);
                 d.setVisible(false);
-                System.out.println(correctAnswerCount);
                 badge.setVisible(true);
                 score.setIcon(new ImageIcon(scoreReturn(correctAnswerCount)));
                 score.setVisible(true);
@@ -312,7 +310,6 @@ public class quiz extends JFrame implements ActionListener {
         }
     }
     public String scoreReturn(int i){
-        System.out.println(i);
         return switch (i) {
             case 0 -> "0.png";
             case 1 -> "1.png";
