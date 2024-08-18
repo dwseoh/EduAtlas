@@ -17,16 +17,19 @@ public class MainMenu extends JFrame implements ActionListener{//extends JFrame 
         menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         menu.setResizable(false);
         menu.setLayout(null);//guis go exactly where I put them
-        menu.setContentPane(new JLabel(new ImageIcon("worldmap.jpg")));
+        menu.setContentPane(new JLabel(new ImageIcon("worldmap.png")));
 
         if(southSudanComplete){//if they've passed the quizz a trophy will appear
             setTrophy(700, 530);
         }
-        southSudan = new JButton("South Sudan");
-        southSudan.setBounds(700, 500, 110, 25);
+        Icon southIcon = new ImageIcon("southSudanButton.png");
+        southSudan = new JButton(southIcon);
+        southSudan.setOpaque(false);
+        southSudan.setContentAreaFilled(false);
+        southSudan.setBorderPainted(false);
+        southSudan.setBounds(700, 325, 120, 120);
         southSudan.addActionListener(this);
         southSudan.setFocusable(false);
-        southSudan.setPreferredSize(new Dimension(110, 25));
         southSudan.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -39,11 +42,14 @@ public class MainMenu extends JFrame implements ActionListener{//extends JFrame 
         if(cambodiaCopmlete){
             setTrophy(1000, 480);
         }
-        cambodia = new JButton("Cambodia");
-        cambodia.setBounds(1000, 450, 110, 25);
+        Icon camIcon = new ImageIcon("cambodiaButton.png");
+        cambodia = new JButton(camIcon);
+        cambodia.setOpaque(false);
+        cambodia.setContentAreaFilled(false);
+        cambodia.setBorderPainted(false);
+        cambodia.setBounds(1082, 332, 40, 40);
         cambodia.addActionListener(this);
         cambodia.setFocusable(false);
-        cambodia.setPreferredSize(new Dimension(110, 25));
         cambodia.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
