@@ -8,6 +8,12 @@ public class quiz extends JFrame implements ActionListener {
     private JFrame quiz;
     private JButton back;
     private JButton toMap;
+    private JButton a;
+    private JButton b;
+    private JButton c;
+    private JButton d;
+    private int questionNum = 0;
+    private int correctAnswerCount = 0;
 
     public quiz(String country_){
         country = country_;
@@ -29,7 +35,7 @@ public class quiz extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 quiz.dispose();
-                switch(country){
+                switch (country) {
                     case "southSudan" -> new southSudan();
                     case "cambodia" -> new cambodia();
                 }
@@ -52,7 +58,6 @@ public class quiz extends JFrame implements ActionListener {
         quiz.add(toMap);
 
 
-
         switch (country) {
             case "southSudan" -> southSudanQuiz();
             case "cambodia" -> cambodiaQuiz();
@@ -71,4 +76,25 @@ public class quiz extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
     }
+//    private String fileReturnSudan(int questionNum){
+//        switch(questionNum){
+//            case 0:
+//                //file one
+//                break;
+//            case 1:
+//                //file 2
+//                break;
+//            case 2:
+//                //file 3
+//                break;
+//            case 3:
+//                //file 4
+//                break;
+//            case 4:
+//                //file 5
+//                break;
+//            default:
+//                return "error";
+//        }
+//    }
 }

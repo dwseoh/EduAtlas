@@ -21,65 +21,88 @@ public class southSudan extends JFrame implements ActionListener {
         southSudan = new JFrame();//initializes JFrame
         southSudan.setBackground(Color.black);
         southSudan.setTitle("Menu");
-        southSudan.setSize(580, 425);
+        southSudan.setSize(1440, 810);
         southSudan.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         southSudan.setResizable(false);
         southSudan.setLayout(null);//guis go exactly where I put them
-        southSudan.setContentPane(new JLabel(new ImageIcon("southSudan.jpg")));
+        southSudan.setContentPane(new JLabel(new ImageIcon("southSudan.png")));
 
-        traditionalBridalAttire = new JButton();
-        traditionalBridalAttire.setBounds(121,290, 110, 25);
+        Icon bridalIcon = new ImageIcon("weddingDress.png");
+        traditionalBridalAttire = new JButton(bridalIcon);
+        traditionalBridalAttire.setOpaque(false);
+        traditionalBridalAttire.setContentAreaFilled(false);
+        traditionalBridalAttire.setBorderPainted(false);
+        traditionalBridalAttire.setBounds(717,87, 450, 253);
         traditionalBridalAttire.addActionListener(this);
         traditionalBridalAttire.setFocusable(false);
-        traditionalBridalAttire.setPreferredSize(new Dimension(110, 25));
         traditionalBridalAttire.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 traditional = true;
+                Icon weddingDressD = new ImageIcon("weddingDressDone.png");
+                traditionalBridalAttire.setIcon(weddingDressD);
+                southSudan.repaint();
             }
         });
 
-        choreTools = new JButton();
-        choreTools.setBounds(421,290, 110, 25);
+        Icon choreIcon = new ImageIcon("choreTools.png");
+        choreTools = new JButton(choreIcon);
+        choreTools.setOpaque(false);
+        choreTools.setContentAreaFilled(false);
+        choreTools.setBorderPainted(false);
+        choreTools.setBounds(850,505, 300, 169);
         choreTools.addActionListener(this);
         choreTools.setFocusable(false);
-        choreTools.setPreferredSize(new Dimension(410, 25));
         choreTools.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 chore = true;
+                Icon choreToolD = new ImageIcon("choreToolsDone.png");
+                choreTools.setIcon(choreToolD);
+                southSudan.repaint();
             }
         });
 
-        religion = new JButton();
-        religion.setBounds(121,190, 110, 25);
+        Icon religionIcon = new ImageIcon("religion.png");
+        religion = new JButton(religionIcon);
+        religion.setOpaque(false);
+        religion.setContentAreaFilled(false);
+        religion.setBorderPainted(false);
+        religion.setBounds(175,70, 450, 253);
         religion.addActionListener(this);
         religion.setFocusable(false);
-        religion.setPreferredSize(new Dimension(410, 25));
         religion.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 relig = true;
+                Icon religD = new ImageIcon("religionDone.png");
+                religion.setIcon(religD);
+                southSudan.repaint();
             }
         });
 
-        oldBedding = new JButton();
-        oldBedding.setBounds(421,190, 110, 25);
+        Icon bedIcon = new ImageIcon("quilt.png");
+        oldBedding = new JButton(bedIcon);
+        oldBedding.setOpaque(false);
+        oldBedding.setContentAreaFilled(false);
+        oldBedding.setBorderPainted(false);
+        oldBedding.setBounds(185,423, 500, 282);
         oldBedding.addActionListener(this);
         oldBedding.setFocusable(false);
-        oldBedding.setPreferredSize(new Dimension(410, 25));
         oldBedding.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 old = true;
+                Icon quilD = new ImageIcon("quiltDone.png");
+                oldBedding.setIcon(quilD);
+                southSudan.repaint();
             }
         });
 
         quiz = new JButton("Quiz");
-        quiz.setBounds(300, 290, 110, 25);
+        quiz.setBounds(1315, 745, 110, 25);
         quiz.addActionListener(this);
         quiz.setFocusable(false);
-        quiz.setPreferredSize(new Dimension(110, 25));
         quiz.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -89,10 +112,9 @@ public class southSudan extends JFrame implements ActionListener {
         });
 
         toMap = new JButton("return to map");//allows them to return to map without badge
-        toMap.setBounds(203,250,130,25);
+        toMap.setBounds(0,745,130,25);
         toMap.addActionListener(this);
         toMap.setFocusable(false);
-        toMap.setPreferredSize((new Dimension(130, 25)));
         toMap.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

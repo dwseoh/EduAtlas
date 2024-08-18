@@ -44,7 +44,7 @@ public class MainMenu extends JFrame implements ActionListener{//extends JFrame 
         menu.add(southSudan);
 
         if(cambodiaCopmlete){
-            setTrophy(1082, 382);
+            setTrophy(1052, 335);
         }
         Icon camIcon = new ImageIcon("cambodiaButton.png");
         cambodia = new JButton(camIcon);
@@ -113,7 +113,7 @@ public class MainMenu extends JFrame implements ActionListener{//extends JFrame 
     }
     public void setTrophy(int xValue, int yValue){//places a badge instead of the button to go into the country
         trophy = new JLabel((new ImageIcon("trophy.png")));
-        trophy.setBounds(xValue, yValue, 50, 50);
+        trophy.setBounds(xValue, yValue, 120, 120);
         trophy.setVisible(true);
         menu.add(trophy);
     }
