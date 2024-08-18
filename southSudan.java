@@ -143,10 +143,14 @@ public class southSudan extends JFrame implements ActionListener {
             }
         });
 
-        toMap = new JButton("return to map");//allows them to return to map without badge
-        toMap.setBounds(0,745,130,25);
+        Icon returner = new ImageIcon("return.png");
+        toMap = new JButton(returner);//allows them to return to map without badge
+        toMap.setBounds(5,715,300,44);
         toMap.addActionListener(this);
         toMap.setFocusable(false);
+        toMap.setOpaque(false);
+        toMap.setContentAreaFilled(false);
+        toMap.setBorderPainted(false);
         toMap.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
